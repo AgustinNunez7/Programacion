@@ -3,6 +3,7 @@ alquileres = 0
 descuento = 0
 kilometros_total = 0
 precio_bruto = 0
+precio_final = 0
 contador_tarjeta = 0
 contador_auto = 0
 contador_moto = 0
@@ -34,7 +35,7 @@ while continuar == "si":
         kilometros = int(input("Error. Kilometros recorridos(entre 0 y 5000): "))
 
     forma_pago = input("Forma de pago(efectivo, tarjeta, transferencia): ")
-    while forma_pago != "efectivo" and forma_pago != "tarjeta" and forma_pago != "transferecia":
+    while forma_pago != "efectivo" and forma_pago != "tarjeta" and forma_pago != "transferencia":
         forma_pago = input("Error. Forma de pago(efectivo, tarjeta, transferencia): ")
 
     frecuente = input("Cliente frecuente(si,no): ")
@@ -53,6 +54,8 @@ while continuar == "si":
         descuento += -20
     resta = precio * descuento / 100
     precio = precio - resta
+
+    precio_final += precio
 
     match tipo_vehiculo:
         case "auto":
@@ -81,8 +84,8 @@ while continuar == "si":
 
 if kilometros_total > 20000:
     descuento = -10
-    resta = precio_bruto * descuento / 100
-    precio_final = precio_bruto - resta
+    resta = precio_final * descuento / 100
+    precio_final = precio_final - resta
 
 mayor_vehiculo = contador_auto
 mensaje_vehiculo = "auto"
@@ -108,9 +111,9 @@ print(
 f'''
 a. Precio bruto: {precio_bruto} Total final: {precio_final}
 b. Tipo de vehiculo con mayor cantidad de alquileres: {mensaje_vehiculo}
-c. Nombre de cliente que mas dias alquilo: {mayor_dias}
+c. Nombre de cliente que mas dias alquilo: {mayor_nombre}
 d. Promedio de kilometros recorridos: {promedio_km}
-e. Vehiculo que acumulo mas kilometros: {mayor_kilometro}
+e. Vehiculo que acumulo mas kilometros: {mensaje_kilometro}
 f. Alquileres pagados con tarjeta: {contador_tarjeta}
 g. {mayor_estafado} tuvo el alquiler de mas importe con {mayor_importe}
 '''

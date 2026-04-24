@@ -19,11 +19,11 @@ while continuar == "si":
     while edad <= 0:
         edad = int(input("Error. Edad: "))
 
-    puntos = int(input("Cantidad de puntos: "))
+    puntos = int(input("Cantidad de puntos(0-60): "))
     while puntos < 0 or puntos > 60:
         puntos = int(input("Error. Cantidad de puntos: "))
 
-    partidos_ganados = int(input("Numero de partidos ganados: "))
+    partidos_ganados = int(input("Numero de partidos ganados(0-35): "))
     while partidos_ganados < 0 or partidos_ganados > 35:
         partidos_ganados = int(input("Error. Numero de partidos ganados: "))
 

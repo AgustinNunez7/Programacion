@@ -16,7 +16,7 @@ for i in range(ventas):
         tipo_producto = input("Error. Tipo de producto(alimento, limpieza, perfumeria): ")
 
     pago = input("Forma de pago(efectivo, tarjeta, transferencia,): ")
-    while pago != "alimento" and pago != "limpieza" and pago != "perfumeria":
+    while pago != "efectivo" and pago != "tarjeta" and pago != "transferencia":
         pago = input("Error. Forma de pago(efectivo, tarjeta, transferencia,): ")
 
     unidades = int(input("Cantidad de unidades(1-20): "))

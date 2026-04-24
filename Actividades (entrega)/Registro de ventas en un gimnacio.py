@@ -32,7 +32,7 @@ while continuar == "si":
         precio_plan = int(input("Error. Precio del plan(mayor a 0): "))
 
     forma_pago = input("Forma de pago(efectivo, tarjeta, transferencia): ")
-    while forma_pago != "efectivo" and forma_pago != "tarjeta" and forma_pago != "transferecia":
+    while forma_pago != "efectivo" and forma_pago != "tarjeta" and forma_pago != "transferencia":
         forma_pago = input("Error. Forma de pago(efectivo, tarjeta, transferencia): ")
 
     turno = input("Turno(mañana, tarde, noche): ")
@@ -101,7 +101,7 @@ if contador_tarde > mayor_turno:
     mensaje_turno = "tarde"
 if contador_anoche > mayor_turno:
     mayor_turno = contador_anoche
-    mensaje_turno = "anual"
+    mensaje_turno = "noche"
 
 mayor_pago = contador_efectivo
 mensaje_pago = "efectivo"

@@ -9,7 +9,7 @@ for i in range(10):
     nombre = input("Nombre: ")
     
     edad = int(input("Edad(mayor a 18): "))
-    while edad > 18:
+    while edad < 18:
         edad = int(input("Error. Edad(mayor a 18): "))
     
     genero = input("Genero(Masculino, Femenino, Otro): ")
@@ -45,17 +45,17 @@ porcentaje = contador_no_ia * 10 / 100
 if mayor_IA == 0:
     mensaje_mayor_ia = "Nadie voto por IA"
 else:
-    mensaje_mayor_ia = f"{nombre_IA} de {mayor_IA} años, voto por IA"
+    mensaje_mayor_ia = f"{nombre_IA} de {mayor_IA} años, voto por IA y es el mayor"
 
 if mayor_RV == 0:
     mensaje_mayor_rv = "Nadie voto por RV"
 else:
-    mensaje_mayor_rv = f"{nombre_RV} de {mayor_RV} años, voto por RV"
+    mensaje_mayor_rv = f"{nombre_RV} de {mayor_RV} años, voto por RV y es el mayor"
 
 if mayor_IOT == 0:
     mensaje_mayor_iot = "Nadie voto por IOT"
 else:
-    mensaje_mayor_iot = f"{nombre_IOT} de {mayor_IOT} años, voto por IOT"
+    mensaje_mayor_iot = f"{nombre_IOT} de {mayor_IOT} años, voto por IOT y es el mayor"
 
 
 print(

@@ -45,7 +45,7 @@ while continuar == "si":
         obra_social = input("Error. Tiene obra social?(si,no): ")
 
     forma_pago = input("Forma de pago(efectivo, tarjeta, transferencia): ")
-    while forma_pago != "efectivo" and forma_pago != "tarjeta" and forma_pago != "transferecia":
+    while forma_pago != "efectivo" and forma_pago != "tarjeta" and forma_pago != "transferencia":
         forma_pago = input("Error. Forma de pago(efectivo, tarjeta, transferencia): ")
     
     pacientes += 1
